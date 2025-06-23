@@ -27,6 +27,7 @@ target/
 
 # Rust
 main.rs
+mod.rs
 
 # Latex
 *.acn
