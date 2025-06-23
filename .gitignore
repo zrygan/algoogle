@@ -25,6 +25,9 @@ target/
 
 /target
 
+# Rust
+main.rs
+
 # Latex
 *.acn
 *.acr
