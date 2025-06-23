@@ -28,6 +28,8 @@ target/
 # Rust
 main.rs
 mod.rs
+Cargo.lock
+Cargo.toml
 
 # Latex
 *.acn
