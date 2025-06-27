@@ -1,0 +1,34 @@
+\section{Sequence Search}
+
+Sequence search algorithms locate a target element \( k \) within an input sequence (or list) \( S \). Informally, this is like finding a \emph{needle} in a \emph{haystack}.
+
+Formally, a problem instance is given by the ordered pair
+
+\[
+x = (S, k),
+\]
+
+where \( S = [S[0], S[1], \ldots, S[n-1]] \) is a sequence of length \( n = |S| \), and \( k \) is the target element we wish to find.
+
+We define the relation \( R \) representing the correct search results as:
+
+\[
+R = \left\{ \big((S, k), i\big) \mid 0 \leq i < n \text{ and } S[i] = k \right\}.
+\]
+
+That is, \( R \) relates each problem instance \((S, k)\) to all indices \( i \) where the element at position \( i \) equals the target \( k \).
+
+To specify a search algorithm formally, we define a \textbf{partial function}~\footnote{A \emph{partial function} is a function that may be undefined for some inputs in its domain, meaning it does not produce an output for every possible input.}.
+
+
+\[
+\mathcal{F}: (S, k) \mapsto 
+\begin{cases}
+i & \text{if } ( (S, k), i ) \in R \text{ for some } i, \text{ usually the smallest such } i, \\
+\emptyset & \text{if } k \notin S,
+\end{cases}
+\]
+
+where \(\emptyset\) denotes that the element \( k \) is not found in the sequence \( S \).
+
+Note that the indexing here is zero-based, meaning valid indices range from \(0\) to \(n-1\).

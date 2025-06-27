@@ -10,13 +10,25 @@
 
 \documentclass{book}
 
-% AMS Packages
+%%%%%% AMS Packages
 \usepackage{amsfonts, amsmath, amssymb}
 
-% Algorithm Packages
+%%%%%% Algorithm Packages
 \usepackage{algorithm, algpseudocode}
 
-\title{Linear Search}
+%%%%%% Clever References
+\usepackage{cleveref}
+\crefname{defn}{definition}{definitions}
+\usepackage{todonotes}
+
+%%%%%% Some Shorthands
+%%% ASM : ASymptotic Bound
+\newcommand{\asb}[1]{\mathcal{O}(#1)}
+
+\newtheorem{defn}{Definition}
+\newtheorem{remark}{Remark}
+
+\title{Algoogle}
 \author{Zhean Ganituen}
 \date{June 23, 2025}
 
@@ -25,6 +37,8 @@
 \maketitle
 \tableofcontents
 
+\input{chapters/search/search.tex}
+\input{chapters/search/sequence_search.tex}
 \input{chapters/search/linear_search}
 
 \bibliography{ref}

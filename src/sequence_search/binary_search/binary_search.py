@@ -3,7 +3,7 @@ def binary_search(seq, key):
     high = len(seq) - 1
 
     while (low <= high):
-        mid = low + ((high - low) / 2)
+        mid = (high - low) // 2
 
         if seq[mid] < key:
             low = mid + 1
