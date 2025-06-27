@@ -1,11 +1,6 @@
 \subsection{Linear Search}
 
-In linear search, we determine if \( ((S,k), y) \in R \) by going through
-each \( s_i \in S \) and checking if \( s = k \). If the equality is true,
-we return \( i \), otherwise we move to \( s_{i+1} \) and compare again. 
-If we have gone through every \( s_i \) and we are yet to find 
-\( k \), then we have determined that $k \notin S$. Which, in that case, 
-we return \( \emptyset \).
+In linear search, we determine if \( ((S,k), y) \in R \) by going through each \( s_i \in S \) and checking if \( s = k \). If the equality is true, we return \( i \), otherwise we move to \( s_{i+1} \) and compare again. If we have gone through every \( s_i \) and we are yet to find \( k \), then we have determined that $k \notin S$. Which, in that case, we return \( \emptyset \).
 
 \begin{algorithm}
 \caption{\textsc{Linear-Search-Algorithm}}
@@ -21,13 +16,9 @@ we return \( \emptyset \).
     \end{algorithmic}
 \end{algorithm}
 
-We may notice that if \( k = s_1 \), then the algorithm would return in 
-constant time \( \asb{1} \) since the target element is the first element. 
-So, the algorithm would return after one comparison.
+We may notice that if \( k = s_1 \), then the algorithm would return in constant time \( \asb{1} \) since the target element is the first element. So, the algorithm would return after one comparison.
 
-However, if \( k = s_{|S| - 1}\), then the algorithm would stop in 
-linear time \( \asb{|S|} \), since it will check every element before 
-getting to the target element. This is also true if \( k \notin S \).
+However, if \( k = s_{|S| - 1}\), then the algorithm would stop in linear time \( \asb{|S|} \), since it will check every element before getting to the target element. This is also true if \( k \notin S \).
 
 \begin{itemize}
     \item Worst and average case: \( \asb{|S|} \)

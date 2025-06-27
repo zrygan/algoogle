@@ -1,21 +1,14 @@
 \chapter{Search}
 
 \begin{defn}\label{search_problem}
-A \textbf{search problem} \(\pi\) is specified by a binary relation
-\( R_\pi\), where \((x,y) \in R_\pi\)
-means that \( y \) is an \textbf{admissible answer} for the \textbf{problem instance} 
-\( x \).
+    A \textbf{search problem} \(\pi\) is specified by a binary relation\( R_\pi \), where \((x,y) \in R_\pi\) means that \( y \) is an \textbf{admissible answer} for the \textbf{problem instance} \( x \).
 \end{defn}
 
 \begin{defn}\label{search_algorithm}
-A \textbf{search algorithm} for problem \(\pi\) is an algorithm that,
-given an instance \( x \), outputs some \( y \) such that \((x,y) \in R_\pi\),
-if such a \( y \) exists.
+    A \textbf{search algorithm} for problem \(\pi\) is an algorithm that, given an instance \( x \), outputs some \( y \) such that \((x,y) \in R_\pi\), if such a \( y \) exists.
 \end{defn}
 
 \begin{remark}
-Every search problem \(\pi \in \Pi\) has a corresponding \emph{decision 
-problem} \(L_\pi\). This decision problem answers YES if the solution set 
-\(S_{\pi}(x)\) for a given instance \(x\) is non-empty, and NO otherwise.
+    Every search problem \(\pi \in \Pi\) has a corresponding \emph{decision problem} \(L_\pi\). This decision problem answers YES if the solution set \(S_{\pi}(x)\) for a given instance \(x\) is non-empty, and NO otherwise.
 \end{remark}
 
