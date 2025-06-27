@@ -1,0 +1,33 @@
+\subsection{Binary Search}
+
+Binary search requires \( S \) to be a \textbf{sorted list}: for two indices \( i,j \in \left[0, |S| - 1\right] \) and \( i < j \), the values at those indices follow \( S[i] < S[j] \).
+
+The algorithm starts by calculating the index  of the first element \( l \) (usually \( l = 0 \)), the index of the last element \( h \) (usually \( h = |S| - 1\)), and the midpoint between these two indices \( m = l + \frac{h-1}{2}\). We then check the value at \( m \) and check if \( S[m] = k \). If the comparison is true, then we return \( m \), otherwise we do one of the following:
+
+\begin{itemize}
+    \item If \( S[m] > k \), then \( h \gets m - 1 \).
+    \item Otherwise, \( l \gets m + 1 \).
+\end{itemize}
+
+Then, recalculate \( m \) using the formula above. We continue this process untill \( l = h \) or we get \( S[m] = k \).
+
+\begin{algorithm}
+    \caption{\textsc{Binary-Search}}
+    \label{alg:binary_search}
+    \begin{algorithmic}
+        \Require A sorted list \( S \), and a target element \( k \)
+        \State \( h \gets |S| - 1 \)
+        \State \( l \gets 0 \)
+        \While{\( l \leq h \)}
+            \State \( m \gets  l + \frac{h-1}{2}\)
+            \If{\( S[m] > k \)}
+                \State \( h \gets m - 1 \)
+            \ElsIf{\( S[m] < k \)}
+                \State \( l \gets m + 1 \)
+            \Else
+                \State \Return m
+            \EndIf
+        \EndWhile
+        \State \Return \( \emptyset \)
+    \end{algorithmic}
+\end{algorithm}
