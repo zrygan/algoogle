@@ -3,8 +3,8 @@
 In linear search, we determine if \( ((S,k), y) \in R \) by going through each \( s_i \in S \) and checking if \( s = k \). If the equality is true, we return \( i \), otherwise we move to \( s_{i+1} \) and compare again. If we have gone through every \( s_i \) and we are yet to find \( k \), then we have determined that $k \notin S$. Which, in that case, we return \( \emptyset \).
 
 \begin{algorithm}
-\caption{\textsc{Linear-Search-Algorithm}}
-\label{linear_search}
+    \caption{\textsc{Linear-Search}}
+    \label{alg:linear_search}
     \begin{algorithmic}
         \Require A list $S$, and a target element $k$
         \For{$i = 0$ to $|S| - 1$}
